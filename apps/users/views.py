@@ -8,6 +8,3 @@ from rest_framework.filters import SearchFilter
 from django.db.models import Sum
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
-class UserAPIView(ListAPIView):
-    queryset = models.User.objects.all().filter(type='expert')
-    serializer_class = serializers.UserListSerializer
